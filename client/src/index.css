@@ -1,0 +1,112 @@
+body {
+  --base1: #EBEFF3;
+  --base2: #C3D0DB;
+  --base3: #88A1B7;
+  --baseDark1: #396387;
+  --baseDark2: #204566;
+  --baseDark3: #152E44;
+  --base: #090E10;
+  --primary1: #FFA68B;
+  --primary2: #FF7145;
+  --primary3: #FF3D00;
+  --primaryDark1: #BA2D00;
+  --primaryDark2: #741C00;
+  --primaryDark3: #5C2511;
+  --primary: #2F0C00;
+}
+
+[data-theme="dark"] {
+  --base1: #2F4858;
+  --base2: #233541;
+  --base3: #162128;
+  --baseDark1: #ECEEEF;
+  --baseDark2: #B3BCC2;
+  --baseDark3: #7A8A94;
+}
+
+body {
+  --base-shadow: inset 0px 0px 0px var(--base3),
+  inset 0px 0px 0px var(--base1),
+  4px 4px 9px var(--base3),
+  -4px -4px 9px var(--base1);
+  --base-shadow-active: inset 4px 4px 9px var(--base3),
+  inset -4px -4px 6px var(--base1),
+  2px 2px 9px var(--base3),
+  -2px -2px 9px var(--base1);
+  --base-shadow-neutral: inset 0px 0px 0px var(--base3),
+  inset 0px 0px 0px var(--base1),
+  4px 4px 16px var(--base2),
+  -4px -4px 16px var(--base2);
+  --base-shadow-neutral-active: inset 2px 2px 6px var(--base3),
+  inset -2px -2px 6px var(--base1),
+  2px 2px 6px var(--base3),
+  -2px -2px 6px var(--base1);
+  --primary-shadow: inset 0px 0px 0px var(--primary3),
+  inset 0px 0px 0px var(--primary1),
+  4px 4px 9px var(--primary3),
+  -4px -4px 9px var(--primary1);
+  --primary-shadow-active: inset 4px 4px 9px var(--primaryDark1),
+  inset -4px -4px 6px var(--primary2),
+  2px 2px 9px var(--primaryDark1),
+  -2px -2px 9px var(--primary1);
+  --primary-shadow-neutral: inset 0px 0px 0px var(--primary3),
+  inset 0px 0px 0px var(--primary1),
+  4px 4px 16px var(--primary2),
+  -4px -4px 16px var(--primary2);
+  --primary-shadow-neutral-active: inset 2px 2px 6px var(--primary3),
+  inset -2px -2px 6px var(--primary1),
+  2px 2px 6px var(--primary3),
+  -2px -2px 6px var(--primary1);
+  --shadow-transition: all 0.25s cubic-bezier(.17, .67, .83, .67);
+  --text-shadow:
+    -0.6px -0.6px 0px var(--baseDark1),
+    0.6px -0.6px 0px var(--baseDark1),
+    0.6px 0.6px 0px var(--baseDark1),
+    -0.6px 0.6px 0px var(--baseDark1)
+  ;
+  --input-shadow:
+    2px 2px 9px var(--base3),
+    -2px -2px 9px var(--base1)
+  ;
+  --input-shadow-active:
+    inset 2px 2px 6px var(--base3),
+    inset -2px -2px 6px var(--base1),
+    1px 1px 6px var(--base3),
+    -1px -1px 6px var(--base1)
+  ;
+  --input-shadow-valid:
+    inset 2px 2px 4px var(--base3),
+    inset -2px -2px 4px var(--base1),
+    1px 1px 6px var(--base3),
+    -1px -1px 6px var(--base1)
+  ;
+  --input-radio-inner-valid:
+    inset 2px 2px 4px var(--base3),
+    inset -2px -2px 4px var(--base1),
+    1px 1px 4px var(--base3),
+    -1px -1px 4px var(--base1)
+  ;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  --main-font: Helvetica, Arial, sans-serif;
+}
+
+.register{
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.error-messenger{
+  text-align: left;
+  font-weight: 600;
+  color: #fc5603;
+  font-style: italic;
+}

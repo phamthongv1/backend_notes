@@ -20,7 +20,6 @@ export default function CreateNote() {
 
   const createNote = async (e) => {
     e.preventDefault();
-    console.log(e)
     try {
       const token = localStorage.getItem("tokenStore");
       if (token) {

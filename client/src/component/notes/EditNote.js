@@ -16,7 +16,6 @@ export default function EditNote({ match }) {
 
   useEffect(() => {
     const getNote = async () => {
-        console.log(match.params.id)
       const token = localStorage.getItem("tokenStore");
       if (match.params.id) {
         const res = await axios.get(`/api/notes/${match.params.id}`, {
@@ -49,7 +48,6 @@ export default function EditNote({ match }) {
           content,
           date,
         };
-        console.log(newNote)
         await axios.post(`/api/notes/${id}`, newNote, {
           headers: { Authorization: token },
         });

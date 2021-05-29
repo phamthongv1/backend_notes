@@ -36,7 +36,7 @@ const NoteCtrl = {
   },
   updateNote: async (req, res) => {
     try {
-      const { title, content, date } = req;
+      const { title, content, date } = req.body;
       await Notes.findOneAndUpdate(
         { _id: req.params.id },
         {

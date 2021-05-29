@@ -42,15 +42,16 @@ export default function EditNote({ match }) {
     try {
       const token = localStorage.getItem("tokenStore");
       if (token) {
-        const { title, content, date, id } = note;
+        const { title, content, date } = note;
         const newNote = {
           title,
           content,
           date,
         };
-        await axios.post(`/api/notes/${id}`, newNote, {
+        await axios.put(`/api/notes/${match.params.id}`, newNote, {
           headers: { Authorization: token },
         });
+        console.log(newNote)
         return history.push("/");
       }
     } catch (error) {
@@ -73,7 +74,7 @@ export default function EditNote({ match }) {
                   placeholder="Title"
                   required
                   onChange={onChangeInput}
-                  value={note.title}
+                  value={note.title || ''}
                 />
                 <label htmlFor="title">Tittle</label>
               </div>
@@ -88,7 +89,7 @@ export default function EditNote({ match }) {
                   required
                   rows="10"
                   onChange={onChangeInput}
-                  value={note.content}
+                  value={note.content || ''}
                 />
                 <label htmlFor="content">Content</label>
               </div>
@@ -103,7 +104,7 @@ export default function EditNote({ match }) {
                   required
                   autoComplete="true"
                   onChange={onChangeInput}
-                  value={note.date}
+                  value={note.date || ''}
                 />
               </div>
             </div>

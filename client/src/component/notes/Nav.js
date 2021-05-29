@@ -10,8 +10,10 @@ export default function Nav({ setIsLogin }) {
   };
 
   return (
-    <header>
-      <div className="logo">Your notes</div>
+    <header className="container-note header">
+      <div className="logo">
+        <Link to="/">Your notes</Link>
+      </div>
       <div className="menu">
         <ul>
           <li>
@@ -23,7 +25,7 @@ export default function Nav({ setIsLogin }) {
           <li onClick={logoutSubmit}>
             <button className="btnLogout">
               <span>
-                <i class="fas fa-sign-out-alt"></i>
+                <i className="fas fa-sign-out-alt"></i>
               </span>
             </button>
           </li>

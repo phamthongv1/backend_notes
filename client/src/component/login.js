@@ -15,7 +15,6 @@ export default function Login({ setIsLogin }) {
   const [err, setErr] = useState("");
   const [isRegister, setIsRegister] = useState(false);
 
-
   const onChangeInput = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -53,11 +52,16 @@ export default function Login({ setIsLogin }) {
     }
   };
 
+  const handleRegister = (value) => {
+    setUser({ name: "", email: "", password: "" });
+    setIsRegister(value);
+  };
+
   return (
     <>
       {isRegister ? (
-        <div className="container">
-          <div className="card">
+        <div className="container container-login">
+          <div className="card login-card">
             <div className="card__content">
               <h3 className="card__title">Login</h3>
               <form onSubmit={registerSubmit}>
@@ -114,7 +118,9 @@ export default function Login({ setIsLogin }) {
                 </div>
                 <p className="guide">
                   You have an account?{" "}
-                  <span className="register">
+                  <span
+                    className="register"
+                    onClick={() => handleRegister(false)}>
                     Login Now
                   </span>
                 </p>
@@ -124,7 +130,7 @@ export default function Login({ setIsLogin }) {
         </div>
       ) : (
         <div className="container">
-          <div className="card">
+          <div className="card login-card">
             <div className="card__content">
               <h3 className="card__title">Login</h3>
               <form onSubmit={loginSubmit}>
@@ -167,7 +173,9 @@ export default function Login({ setIsLogin }) {
                 </div>
                 <p className="guide">
                   You don't have an account?{" "}
-                  <span className="register">
+                  <span
+                    className="register"
+                    onClick={() => handleRegister(true)}>
                     Register Now
                   </span>
                 </p>

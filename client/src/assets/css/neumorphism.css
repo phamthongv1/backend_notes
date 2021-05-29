@@ -10,6 +10,7 @@ h3 {
     line-height: 30px;
     font-weight: bold;
     text-align: center;
+    margin: 12px 0;
 }
 
 button {
@@ -32,7 +33,7 @@ button {
     cursor: pointer;
 }
 
-.btnLogout{
+.btnLogout {
     border-radius: 10px;
     padding: 10px 20px;
     max-width: 500px;
@@ -156,7 +157,8 @@ button:disabled:focus {
     box-shadow: unset;
 }
 
-input {
+input,
+textarea {
     border: none;
     box-sizing: border-box;
 }
@@ -166,7 +168,8 @@ input {
 }
 
 .text-input-group label,
-.text-input-group input {
+.text-input-group input,
+.text-input-group textarea {
     font-size: 14px;
     line-height: 20px;
     font-family: var(--main-font);
@@ -183,7 +186,8 @@ input {
     transition: all 0.25s linear;
 }
 
-.text-input-group input {
+.text-input-group input,
+.text-input-group textarea {
     width: 500px;
     border-radius: 10px;
     min-height: 30px;
@@ -197,35 +201,44 @@ input {
     color: var(--base3);
 }
 
-.text-input-group input::-webkit-input-placeholder {
+textarea {
+    resize: none;
+}
+
+.text-input-group input::-webkit-input-placeholder,
+.text-input-group textarea::-webkit-input-placeholder {
     color: var(--base2);
     -webkit-transition: color 0.25s linear;
     transition: color 0.25s linear;
     text-shadow: none;
 }
 
-.text-input-group input::-moz-placeholder {
+.text-input-group input::-moz-placeholder,
+.text-input-group textarea::-moz-placeholder {
     color: var(--base2);
     -moz-transition: color 0.25s linear;
     transition: color 0.25s linear;
     text-shadow: none;
 }
 
-.text-input-group input:-ms-input-placeholder {
+.text-input-group input:-ms-input-placeholder,
+.text-input-group textarea:-ms-input-placeholder {
     color: var(--base2);
     -ms-transition: color 0.25s linear;
     transition: color 0.25s linear;
     text-shadow: none;
 }
 
-.text-input-group input::-ms-input-placeholder {
+.text-input-group input::-ms-input-placeholder,
+.text-input-group textarea::-ms-input-placeholder {
     color: var(--base2);
     -ms-transition: color 0.25s linear;
     transition: color 0.25s linear;
     text-shadow: none;
 }
 
-.text-input-group input::placeholder {
+.text-input-group input::placeholder,
+.text-input-group textarea::placeholder {
     color: var(--base2);
     -webkit-transition: color 0.25s linear;
     transition: color 0.25s linear;
@@ -233,7 +246,9 @@ input {
 }
 
 .text-input-group input:focus:enabled,
-.text-input-group input:active:enabled {
+.text-input-group input:active:enabled,
+.text-input-group textarea:focus:enabled,
+.text-input-group textarea:active:enabled {
     outline: none;
     color: var(--baseDark2);
     border-color: var(--base3);
@@ -243,83 +258,110 @@ input {
 @media (prefers-color-scheme: dark) {
 
     .text-input-group input:focus:enabled,
-    .text-input-group input:active:enabled {
+    .text-input-group input:active:enabled,
+    .text-input-group textarea:focus:enabled,
+    .text-input-group textarea:active:enabled {
         border-color: var(--baseDark1);
     }
 }
 
 .text-input-group input:focus:enabled::-webkit-input-placeholder,
-.text-input-group input:active:enabled::-webkit-input-placeholder {
+.text-input-group input:active:enabled::-webkit-input-placeholder,
+.text-input-group textarea:focus:enabled::-webkit-input-placeholder,
+.text-input-group textarea:active:enabled::-webkit-input-placeholder {
     color: var(--base3);
 }
 
 .text-input-group input:focus:enabled::-moz-placeholder,
-.text-input-group input:active:enabled::-moz-placeholder {
+.text-input-group input:active:enabled::-moz-placeholder,
+.text-input-group textarea:focus:enabled::-moz-placeholder,
+.text-input-group textarea:active:enabled::-moz-placeholder {
     color: var(--base3);
 }
 
 .text-input-group input:focus:enabled:-ms-input-placeholder,
-.text-input-group input:active:enabled:-ms-input-placeholder {
+.text-input-group input:active:enabled:-ms-input-placeholder,
+.text-input-group textarea:focus:enabled:-ms-input-placeholder,
+.text-input-group textarea:active:enabled:-ms-input-placeholder {
     color: var(--base3);
 }
 
 .text-input-group input:focus:enabled::-ms-input-placeholder,
-.text-input-group input:active:enabled::-ms-input-placeholder {
+.text-input-group input:active:enabled::-ms-input-placeholder,
+.text-input-group textarea:focus:enabled::-ms-input-placeholder,
+.text-input-group textarea:active:enabled::-ms-input-placeholder {
     color: var(--base3);
 }
 
 .text-input-group input:focus:enabled::placeholder,
-.text-input-group input:active:enabled::placeholder {
+.text-input-group input:active:enabled::placeholder,
+.text-input-group textarea:focus:enabled::placeholder,
+.text-input-group textarea:active:enabled::placeholder {
     color: var(--base3);
 }
 
 @media (prefers-color-scheme: dark) {
 
     .text-input-group input:focus:enabled::-webkit-input-placeholder,
-    .text-input-group input:active:enabled::-webkit-input-placeholder {
+    .text-input-group input:active:enabled::-webkit-input-placeholder,
+    .text-input-group textarea:focus:enabled::-webkit-input-placeholder,
+    .text-input-group textarea:active:enabled::-webkit-input-placeholder {
         color: var(--baseDark2);
     }
 
     .text-input-group input:focus:enabled::-moz-placeholder,
-    .text-input-group input:active:enabled::-moz-placeholder {
+    .text-input-group input:active:enabled::-moz-placeholder,
+    .text-input-group textarea:focus:enabled::-moz-placeholder,
+    .text-input-group textarea:active:enabled::-moz-placeholder {
         color: var(--baseDark2);
     }
 
     .text-input-group input:focus:enabled:-ms-input-placeholder,
-    .text-input-group input:active:enabled:-ms-input-placeholder {
+    .text-input-group input:active:enabled:-ms-input-placeholder,
+    .text-input-group textarea:focus:enabled:-ms-input-placeholder,
+    .text-input-group textarea:active:enabled:-ms-input-placeholder {
         color: var(--baseDark2);
     }
 
     .text-input-group input:focus:enabled::-ms-input-placeholder,
-    .text-input-group input:active:enabled::-ms-input-placeholder {
+    .text-input-group input:active:enabled::-ms-input-placeholder,
+    .text-input-group textarea:focus:enabled::-ms-input-placeholder,
+    .text-input-group textarea:active:enabled::-ms-input-placeholder {
         color: var(--baseDark2);
     }
 
     .text-input-group input:focus:enabled::placeholder,
-    .text-input-group input:active:enabled::placeholder {
+    .text-input-group input:active:enabled::placeholder,
+    .text-input-group textarea:focus:enabled::placeholder,
+    .text-input-group textarea:active:enabled::placeholder {
         color: var(--baseDark2);
     }
 }
 
 .text-input-group input:focus:enabled+label,
-.text-input-group input:active:enabled+label {
+.text-input-group input:active:enabled+label,
+.text-input-group textarea:focus:enabled+label,
+.text-input-group textarea:active:enabled+label {
     -webkit-transform: translateY(-34px) scale(0.9);
     transform: translateY(-34px) scale(0.9);
     font-weight: 600;
 }
 
-.text-input-group input:valid {
+.text-input-group input:valid,
+.text-input-group textarea:valid {
     box-shadow: var(--input-shadow-valid);
     color: var(--baseDark1);
 }
 
-.text-input-group input:valid+label {
+.text-input-group input:valid+label,
+.text-input-group textarea:valid+label {
     -webkit-transform: translateY(-34px) scale(0.9);
     transform: translateY(-34px) scale(0.9);
     font-weight: 600;
 }
 
-.text-input-group input:disabled {
+.text-input-group input:disabled,
+.text-input-group textarea:disabled {
     color: var(--base3);
     background: var(--base2);
     border-color: var(--base3);
@@ -328,7 +370,8 @@ input {
     transition: unset;
 }
 
-.text-input-group input:disabled+label {
+.text-input-group input:disabled+label,
+.text-input-group textarea:disabled+label {
     color: var(--base3);
 }
 
@@ -456,9 +499,12 @@ input[type="checkbox"]:checked+label::after {
     grid-gap: 10px;
     max-width: 500px;
     padding: 15px 20px;
-    background: var(--base2);
     border: 2px solid var(--base2);
     box-shadow: var(--input-shadow);
+}
+
+.login-card {
+    background: var(--base2);
 }
 
 .card__content {

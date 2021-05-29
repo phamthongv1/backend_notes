@@ -45,7 +45,7 @@ const NoteCtrl = {
           date,
         }
       );
-      req.json({ msg: "Updated a Note" });
+      res.json({ msg: "Updated a Note" });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
